@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodoDetailView: View {
     
-    @State var todo = Todo(title: "Water the cat")
+    @Binding var todo: Todo
     
     var body: some View {
         VStack {
@@ -32,6 +32,6 @@ struct TodoDetailView: View {
 
 struct TodoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoDetailView()
+        TodoDetailView(todo: .constant(Todo(title: "Water the cat demo")))
     }
 }
