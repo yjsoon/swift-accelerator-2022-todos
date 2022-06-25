@@ -22,6 +22,7 @@ struct ContentView: View {
                     Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
                     VStack(alignment: .leading) {
                         Text(todo.title)
+                            .strikethrough(todo.isCompleted)
                         if !todo.details.isEmpty {
                             Text(todo.details)
                                 .font(.caption)
